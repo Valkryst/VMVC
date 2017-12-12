@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import lombok.Getter;
+import lombok.NonNull;
 
 import java.util.Objects;
 
@@ -13,7 +14,7 @@ public class Application extends javafx.application.Application {
     @Getter private Stage primaryStage;
 
     /** The settings. */
-    @Getter private Settings settings;
+    @Getter private final Settings settings;
 
     /** The previous scene's controller. */
     @Getter private Controller previousController;
@@ -24,6 +25,16 @@ public class Application extends javafx.application.Application {
     private Scene previousScene;
     /** The current scene. */
     private Scene currentScene;
+
+    /**
+     * Constructs a new Application.
+     *
+     * @param settings
+     *          The settings.
+     */
+    public Application(final @NonNull Settings settings) {
+        this.settings = settings;
+    }
 
     @Override
     public void start(final Stage primaryStage) {
