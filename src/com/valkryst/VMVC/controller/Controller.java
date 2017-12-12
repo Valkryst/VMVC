@@ -12,7 +12,7 @@ public class Controller<M extends Model, V extends View> {
     @Getter private final Application application;
 
     /** The model. */
-    final M model;
+    protected final M model;
     /** The view. */
     @Getter protected final V view;
 
