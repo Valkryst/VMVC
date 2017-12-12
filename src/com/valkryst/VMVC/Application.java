@@ -12,6 +12,9 @@ public class Application extends javafx.application.Application {
     /** The primary stage. */
     @Getter private Stage primaryStage;
 
+    /** The settings. */
+    @Getter private Settings settings;
+
     /** The previous scene's controller. */
     @Getter private Controller previousController;
     /** The current scene's controller. */
@@ -22,12 +25,8 @@ public class Application extends javafx.application.Application {
     /** The current scene. */
     private Scene currentScene;
 
-    public static void main(final String[] args) {
-        launch();
-    }
-
     @Override
-    public void start(final Stage primaryStage) throws Exception {
+    public void start(final Stage primaryStage) {
         this.primaryStage = primaryStage;
     }
 
