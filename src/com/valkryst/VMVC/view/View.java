@@ -108,6 +108,10 @@ public class View {
             pane.getColumnConstraints().add(constraints);
         }
 
+        for (int i = 0 ; i < controls.length ; i++) {
+            pane.add(controls[i], i, 0);
+        }
+
         return pane;
     }
 
@@ -142,6 +146,10 @@ public class View {
             constraints.setPercentHeight(sectionHeight);
 
             pane.getRowConstraints().add(constraints);
+        }
+
+        for (int i = 0 ; i < controls.length ; i++) {
+            pane.add(controls[i], 0, i);
         }
 
         return pane;
