@@ -33,7 +33,7 @@ public class View {
      * @throws java.lang.IllegalArgumentException
      *           If the message is empty.
      */
-    static void setTooltip(final Control control, final String message) {
+    protected static void setTooltip(final Control control, final String message) {
         Objects.requireNonNull(control);
         Objects.requireNonNull(message);
 
@@ -62,7 +62,7 @@ public class View {
      * @throws java.lang.IllegalArgumentException
      *           If the iconPath is empty.
      */
-    static Button createIconButton(final String iconPath, final int width, final int height) {
+    protected static Button createIconButton(final String iconPath, final int width, final int height) {
         Objects.requireNonNull(iconPath);
 
         if (iconPath.isEmpty()) {
@@ -93,7 +93,7 @@ public class View {
      * @return
      *          The pane.
      */
-    static GridPane createHorizontalGridPane(final Control... controls) {
+    protected static GridPane createHorizontalGridPane(final Control... controls) {
         if (controls.length == 0) {
             return new GridPane();
         }
@@ -129,7 +129,7 @@ public class View {
      * @return
      *          The pane.
      */
-    static GridPane createVerticalGridPane(final Control... controls) {
+    protected static GridPane createVerticalGridPane(final Control... controls) {
         if (controls.length == 0) {
             return new GridPane();
         }
