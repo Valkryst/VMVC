@@ -1,26 +1,30 @@
 package com.valkryst.VMVC.controller;
 
-import com.valkryst.VMVC.Application;
+import com.valkryst.VMVC.SceneManager;
+import com.valkryst.VMVC.Settings;
 import com.valkryst.VMVC.model.Model;
 import com.valkryst.VMVC.view.View;
-import lombok.Getter;
-
-import java.util.Objects;
+import lombok.NonNull;
 
 public class Controller<M extends Model, V extends View> {
-    /** The driver. */
-    @Getter private final Application application;
+    /** The scene manager. */
+    private final SceneManager sceneManager;
+    /** The settings. */
+    private final Settings settings;
 
     /** The model. */
     protected final M model;
     /** The view. */
-    @Getter protected final V view;
+    protected final V view;
 
     /**
      * Constructs a new Controller.
      *
-     * @param application
-     *          The application.
+     * @param sceneManager
+     *          The scene manager.
+     *
+     * @param settings
+     *          The settings.
      *
      * @param model
      *          The model.
@@ -29,14 +33,11 @@ public class Controller<M extends Model, V extends View> {
      *          The view.
      *
      * @throws java.lang.NullPointerException
-     *          If the application, model, or view are null.
+     *          If the any of the params are null.
      */
-    public Controller(final Application application, final M model, final V view) {
-        Objects.requireNonNull(application);
-        Objects.requireNonNull(model);
-        Objects.requireNonNull(view);
-
-        this.application = application;
+    public Controller(final @NonNull SceneManager sceneManager, final @NonNull Settings settings, final @NonNull M model, final @NonNull V view) {
+        this.sceneManager = sceneManager;
+        this.settings = settings;
         this.model = model;
         this.view = view;
     }
