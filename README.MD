@@ -25,7 +25,7 @@ Dependency:
     <dependency>
         <groupId>com.github.Valkryst</groupId>
         <artifactId>VMVC</artifactId>
-        <version>0.7.1</version>
+        <version>0.8.0</version>
     </dependency>
 
 ### Jar
