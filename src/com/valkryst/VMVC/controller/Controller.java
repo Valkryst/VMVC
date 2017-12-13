@@ -4,6 +4,7 @@ import com.valkryst.VMVC.SceneManager;
 import com.valkryst.VMVC.Settings;
 import com.valkryst.VMVC.model.Model;
 import com.valkryst.VMVC.view.View;
+import lombok.Getter;
 import lombok.NonNull;
 
 public class Controller<M extends Model, V extends View> {
@@ -15,7 +16,7 @@ public class Controller<M extends Model, V extends View> {
     /** The model. */
     protected final M model;
     /** The view. */
-    protected final V view;
+    @Getter protected final V view;
 
     /**
      * Constructs a new Controller.
