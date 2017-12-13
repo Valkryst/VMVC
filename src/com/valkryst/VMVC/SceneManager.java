@@ -34,6 +34,25 @@ public class SceneManager {
     }
 
     /**
+     * Sets the initial pane.
+     *
+     * @param controller
+     *          The controller of the initial pane.
+     */
+    public void setInitialPane(final @NonNull Controller controller) {
+        previousController = controller;
+        currentController = controller;
+
+        final Scene scene = new Scene(controller.getView().getPane());
+        scene.getStylesheets().add("global.css");
+        scene.getRoot().getStyleClass().add("main-root");
+
+        primaryStage.setTitle("Schillsaver - Powered by /g/entoomen\u00a9\u00ae");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    /**
      * Swaps the current scene with a new scene, so that the new scene
      * is displayed.
      *
