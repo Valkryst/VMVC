@@ -11,7 +11,7 @@ import java.util.Objects;
 
 public class SceneManager {
     /** The primary stage. */
-    private Stage primaryStage;
+    @Getter private Stage primaryStage;
 
     /** The previous scene's controller. */
     @Getter private Controller previousController;
