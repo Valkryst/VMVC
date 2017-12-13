@@ -9,9 +9,9 @@ import lombok.NonNull;
 
 public class Controller<M extends Model, V extends View> {
     /** The scene manager. */
-    private final SceneManager sceneManager;
+    protected final SceneManager sceneManager;
     /** The settings. */
-    private final Settings settings;
+    protected final Settings settings;
 
     /** The model. */
     protected final M model;
