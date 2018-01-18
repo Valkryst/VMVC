@@ -25,7 +25,7 @@ public class Model {
      * @throws ClassNotFoundException
      *          If the class of the serialized object cannot be found.
      */
-    public static Object serializeObject(final @NonNull String filePath) throws IOException, ClassNotFoundException {
+    public static Object deserializeObject(final @NonNull String filePath) throws IOException, ClassNotFoundException {
         final FileInputStream fis = new FileInputStream(filePath);
         final ObjectInputStream ois = new ObjectInputStream(fis);
 
@@ -55,7 +55,7 @@ public class Model {
      * @throws IOException
      *          If an IO error occurs.
      */
-    public static void deserializeObject(final @NonNull String filePath, final @NonNull Object object) throws IOException, IllegalArgumentException {
+    public static void serializeObject(final @NonNull String filePath, final @NonNull Object object) throws IOException, IllegalArgumentException {
         if (object instanceof Serializable == false) {
             throw new IllegalArgumentException("The specified object does not implement Serializable.");
         }
