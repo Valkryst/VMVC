@@ -49,17 +49,10 @@ public class Model {
      * @throws NullPointerException
      *          If the filePath is null.
      *
-     * @throws IllegalArgumentException
-     *          If the object doesn't implement Serializable.
-     *
      * @throws IOException
      *          If an IO error occurs.
      */
-    public static void serializeObject(final @NonNull String filePath, final @NonNull Object object) throws IOException, IllegalArgumentException {
-        if (object instanceof Serializable == false) {
-            throw new IllegalArgumentException("The specified object does not implement Serializable.");
-        }
-
+    public static void serializeObject(final @NonNull String filePath, final @NonNull Object object) throws IOException {
         final FileOutputStream fos = new FileOutputStream(filePath, false);
         final ObjectOutputStream oos = new ObjectOutputStream(fos);
 
