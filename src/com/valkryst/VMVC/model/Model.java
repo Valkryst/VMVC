@@ -4,7 +4,7 @@ import lombok.NonNull;
 
 import java.io.*;
 
-public class Model {
+public class Model implements Serializable {
     /**
      * Deserializes an object from a file, if the file exists.
      *
