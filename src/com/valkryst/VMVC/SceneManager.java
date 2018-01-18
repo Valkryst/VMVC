@@ -50,7 +50,6 @@ public class SceneManager {
         previousScene = scene;
         currentScene = scene;
 
-        primaryStage.setTitle("Schillsaver - Powered by /g/entoomen\u00a9\u00ae");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
