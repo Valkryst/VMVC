@@ -14,6 +14,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
 import lombok.Getter;
 
+import java.util.List;
 import java.util.Objects;
 
 public class View {
@@ -97,6 +98,21 @@ public class View {
         }
 
         return new ComboBox<>(list);
+    }
+
+    /**
+     * Creates a combo box with zero or more options. Null options are
+     * ignored.
+     *
+     * @param options
+     *          The options to add to the combo box.
+     *
+     * @return
+     *          The combo box.
+     */
+    protected static ComboBox<String> createComboBox(final List<String> options) {
+        options.removeIf(Objects::isNull);
+        return new ComboBox<>(FXCollections.observableArrayList(options));
     }
 
     /**
