@@ -1,11 +1,13 @@
 package com.valkryst.VMVC.view;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Control;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -73,6 +75,28 @@ public class View {
         final Image image = new Image(iconPath, (double) width, (double) height, true, true);
         button.setGraphic(new ImageView(image));
         return button;
+    }
+
+    /**
+     * Creates a combo box with zero or more options. Null options are
+     * ignored.
+     *
+     * @param options
+     *          The options to add to the combo box.
+     *
+     * @return
+     *          The combo box.
+     */
+    protected static ComboBox<String> createComboBox(final String ... options) {
+        final ObservableList<String> list = FXCollections.observableArrayList();
+
+        for (final String option : options) {
+            if (option != null) {
+                list.add(option);
+            }
+        }
+
+        return new ComboBox<>(list);
     }
 
     /**
