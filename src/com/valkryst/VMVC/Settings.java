@@ -1,10 +1,13 @@
 package com.valkryst.VMVC;
 
+import com.valkryst.VMVC.model.Model;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 
 public class Settings implements Serializable {
@@ -38,12 +41,8 @@ public class Settings implements Serializable {
 
     /** Deserializes the settings, if the file exists. */
     private void loadSettings() {
-        try (
-            final FileInputStream fis = new FileInputStream(filePath);
-            final ObjectInputStream ois = new ObjectInputStream(fis);
-        ) {
-            final Object object = ois.readObject();
-            settings = (HashMap<String, String>) object;
+        try {
+            settings = (HashMap<String, String>) Model.deserializeObjectWithGZIP(filePath);
         } catch (final IOException | ClassNotFoundException e) {
             // Delete the file:
             final File file = new File(filePath);
@@ -57,7 +56,7 @@ public class Settings implements Serializable {
     /**
      * Serializes the settings to a file.
      *
-     * @throws java.io.IOException
+     * @throws IOException
      *          If an I/O error occurs.
      */
     public void saveSettings() throws IOException {
@@ -72,14 +71,7 @@ public class Settings implements Serializable {
             return;
         }
 
-
-        final FileOutputStream fos = new FileOutputStream(filePath, false);
-        final ObjectOutputStream oos = new ObjectOutputStream(fos);
-
-        oos.writeObject(settings);
-
-        oos.close();
-        fos.close();
+        Model.serializeObjectWithGZIP(filePath, settings);
     }
 
     /**
