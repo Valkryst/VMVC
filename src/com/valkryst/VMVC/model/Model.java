@@ -5,6 +5,7 @@ import lombok.NonNull;
 import java.io.*;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
+import java.util.zip.ZipException;
 
 public class Model implements Serializable {
     /**
@@ -70,6 +71,11 @@ public class Model implements Serializable {
      *
      * If the file causes an exception, then the file is deleted.
      *
+     * If the file causes a ZipException, then an attempt will be made to
+     * read the file without decompressing it with GZIP as this exception
+     * can be caused by reading an object that wasn't written using the
+     * serializeObjectWithGZIP function.
+     *
      * @param filePath
      *          The path to the file.
      *
@@ -86,16 +92,20 @@ public class Model implements Serializable {
      *          If the class of the serialized object cannot be found.
      */
     public static Object deserializeObjectWithGZIP(final @NonNull String filePath) throws IOException, ClassNotFoundException {
-        final FileInputStream fis = new FileInputStream(filePath);
-        final GZIPInputStream gis = new GZIPInputStream(fis);
-        final ObjectInputStream ois = new ObjectInputStream(gis);
+        try {
+            final FileInputStream fis = new FileInputStream(filePath);
+            final GZIPInputStream gis = new GZIPInputStream(fis);
+            final ObjectInputStream ois = new ObjectInputStream(gis);
 
-        final Object object = ois.readObject();
+            final Object object = ois.readObject();
 
-        ois.close();
-        fis.close();
+            ois.close();
+            fis.close();
 
-        return object;
+            return object;
+        } catch (final ZipException e) {
+            return deserializeObject(filePath);
+        }
     }
 
     /**
