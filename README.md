@@ -3,6 +3,14 @@
 
 This project is currently under a rewrite, and is not yet ready for use.
 
+## Links
+
+* [Example](https://github.com/Valkryst/VMVC#example)
+  * [Controller](https://github.com/Valkryst/VMVC#controller)
+  * [Model](https://github.com/Valkryst/VMVC#model)
+  * [View](https://github.com/Valkryst/VMVC#view)
+* [Credits & Inspiration](https://github.com/Valkryst/VMVC#credits--inspiration)
+
 ## Example
 
 ### Controller
