@@ -3,6 +3,7 @@
 
 This project is a Java implementation of the MVC design pattern. It is designed to be used with Swing UIs and for my
 personal use. It is not intended to be a general purpose MVC framework, but you are free to use it as such if you wish.
+
 The design goals are as follows:
 
 1. Separate the _View_ from the _Model_. This not only makes the code cleaner, easier to read and maintain, but it also
@@ -22,6 +23,8 @@ The classes can be described as follows:
 
 ## Links
 
+* [Projects Using this Pattern]
+  * [Valerie](https://github.com/Valkryst/Valerie) 
 * [Example](https://github.com/Valkryst/VMVC#example)
   * [Controller](https://github.com/Valkryst/VMVC#controller)
   * [Model](https://github.com/Valkryst/VMVC#model)
@@ -53,8 +56,6 @@ public class Example {
     }
 }
 ```
-
-
 
 ### Controller
 
