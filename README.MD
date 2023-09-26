@@ -1,34 +1,59 @@
-## Links
+This project is currently under a rewrite, and is not yet ready for use.
 
-* [JavaDoc Documentation](https://valkryst.github.io/VMVC/)
+## Example
 
+### Controller
 
-## Jar Files & Maven
+A `Controller` provides a way for a `Model` and `View` to communicate with each other. 
 
-The Maven dependency is hosted off of JitPack, so you will need to add JitPack as a repository before you add VMVC as a dependency.
+The `Controller` is responsible for updating the `Model` when the `View` changes. Depending on your application, you can
+have the `Controller` implement various Listener interfaces (e.g. `ActionListener`, `ChangeListener`, etc.) if they
+_only_ need to communicate with the `Model` when the `View` changes. In cases where the `View` needs to be updated,
+then the Listener should be implemented within the `View` and that Listener should call functions in the `Controller`
+to achieve its goal.
 
-### Maven
+Functions within the `Controller` should only get or set data within the `Model` and should not directly interact with
+the `View`.
 
-JitPack ([Example](https://github.com/Valkryst/VMVC/blob/master/pom.xml)):
+```java
+public class ExampleController extends Controller<ExampleModel> {
+    public ExampleController(final ExampleModel model) {
+        super(model);
+    }
+}
+```
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+### Model
 
-Dependency:
+A `Model` contains all data, and logic for manipulating that data, for all of its associated `View`s.
 
-    <dependency>
-        <groupId>com.github.Valkryst</groupId>
-        <artifactId>VMVC</artifactId>
-        <version>0.9.6</version>
-    </dependency>
+```java
+public class ExampleModel extends Model<ExampleController, ExampleView> {
+  @Override
+  protected ExampleController createController() {
+    return new ExampleController(this);
+  }
 
-### Jar
+  @Override
+  protected ExampleView createView(final ExampleController controller) {
+    return new ExampleView(controller);
+  }
+}
+```
 
-Jar files can be found on the [releases](https://github.com/Valkryst/VMVC/releases) page.
+### View
+
+A `View` is a Swing UI that displays the data from its associated `Model` and allows the user to interact with that data.
+
+```java
+public class ExampleView extends View<ExampleController> {
+  public ExampleView(final ExampleController controller) {
+      super(controller);
+      
+      // Create a Swing UI within ExampleView.
+  }
+}
+```
 
 ## Credits & Inspiration
 
