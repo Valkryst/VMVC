@@ -31,3 +31,10 @@ Dependency:
 ### Jar
 
 Jar files can be found on the [releases](https://github.com/Valkryst/VMVC/releases) page.
+
+## Credits & Inspiration
+
+* Architecture
+    * Robert Eckstein's ["Java SE Application Design With MVC"](https://www.oracle.com/technical-resources/articles/javase/application-design-with-mvc.html).
+    * Juri Strumpflohner's ["Logical separation with MVC"](https://juristr.com/blog/2008/03/logical-separation-with-mvc/), a follow-up to Eckstein's article.
+* [Filthy Rich Clients: Developing Animated and Graphical Effects for Desktop Java™ Applications](https://www.amazon.ca/Filthy-Rich-Clients-Developing-Applications/dp/0132413930/)
