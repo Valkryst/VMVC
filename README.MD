@@ -1,5 +1,3 @@
-[![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg)](https://github.com/Valkryst/VMVC/blob/master/LICENSE.md) ![](https://travis-ci.org/Valkryst/VMVC.svg?branch=master) [![codecov](https://codecov.io/gh/Valkryst/VMVC/branch/master/graph/badge.svg)](https://codecov.io/gh/Valkryst/VMVC) [![Release](https://jitpack.io/v/Valkryst/VMVC.svg)](https://jitpack.io/#Valkryst/VMVC)
-
 ## Links
 
 * [JavaDoc Documentation](https://valkryst.github.io/VMVC/)
