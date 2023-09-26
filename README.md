@@ -1,3 +1,6 @@
+[![Java CI with Maven](https://github.com/Valkryst/VMVC/actions/workflows/maven.yml/badge.svg)](https://github.com/Valkryst/VMVC/actions/workflows/maven.yml)
+[![CodeQL](https://github.com/Valkryst/VMVC/actions/workflows/codeql.yml/badge.svg)](https://github.com/Valkryst/VMVC/actions/workflows/codeql.yml)
+
 This project is currently under a rewrite, and is not yet ready for use.
 
 ## Example
