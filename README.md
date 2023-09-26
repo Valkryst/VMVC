@@ -25,11 +25,77 @@ The classes can be described as follows:
 
 * Projects Using this Pattern
   * [Valerie](https://github.com/Valkryst/Valerie) 
+* [Installation](https://github.com/Valkryst/VMVC#installation)
+    * [Gradle](https://github.com/Valkryst/VMVC#-gradle)
+    * [Maven](https://github.com/Valkryst/VMVC#-maven)
+    * [sbt](https://github.com/Valkryst/VMVC#-scala-sbt)
 * [Example](https://github.com/Valkryst/VMVC#example)
   * [Controller](https://github.com/Valkryst/VMVC#controller)
   * [Model](https://github.com/Valkryst/VMVC#model)
   * [View](https://github.com/Valkryst/VMVC#view)
 * [Credits & Inspiration](https://github.com/Valkryst/VMVC#credits--inspiration)
+
+## Installation
+
+VMVC is hosted on the [JitPack package repository](https://jitpack.io/#Valkryst/VMVC)
+which supports Gradle, Maven, and sbt.
+
+### ![Gradle](https://i.imgur.com/qtc6bXq.png?1) Gradle
+
+Add JitPack to your `build.gradle` at the end of repositories.
+
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+Add VMVC as a dependency.
+
+```
+dependencies {
+	implementation 'com.github.Valkryst:VMVC:2023.9.26'
+}
+```
+
+### ![Maven](https://i.imgur.com/2TZzobp.png?1) Maven
+
+Add JitPack as a repository.
+
+``` xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+Add VMVC as a dependency.
+
+```xml
+<dependency>
+    <groupId>com.github.Valkryst</groupId>
+    <artifactId>VMVC</artifactId>
+    <version>2023.9.26</version>
+</dependency>
+```
+
+### ![Scala SBT](https://i.imgur.com/Nqv3mVd.png?1) Scala SBT
+
+Add JitPack as a resolver.
+
+```
+resolvers += "jitpack" at "https://jitpack.io"
+```
+
+Add VMVC as a dependency.
+
+```
+libraryDependencies += "com.github.Valkryst" % "VMVC" % "2023.9.26"
+```
 
 ## Example
 
