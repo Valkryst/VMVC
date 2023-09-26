@@ -23,7 +23,7 @@ The classes can be described as follows:
 
 ## Links
 
-* [Projects Using this Pattern]
+* Projects Using this Pattern
   * [Valerie](https://github.com/Valkryst/Valerie) 
 * [Example](https://github.com/Valkryst/VMVC#example)
   * [Controller](https://github.com/Valkryst/VMVC#controller)
