@@ -57,7 +57,7 @@ Add VMVC as a dependency.
 
 ```
 dependencies {
-	implementation 'com.github.Valkryst:VMVC:2023.9.26-BREAK'
+	implementation 'com.github.Valkryst:VMVC:2023.9.26-BREAK-2'
 }
 ```
 
@@ -79,7 +79,7 @@ Add VMVC as a dependency.
 <dependency>
     <groupId>com.github.Valkryst</groupId>
     <artifactId>VMVC</artifactId>
-    <version>2023.9.26-BREAK</version>
+    <version>2023.9.26-BREAK-2</version>
 </dependency>
 ```
 
@@ -94,7 +94,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 Add VMVC as a dependency.
 
 ```
-libraryDependencies += "com.github.Valkryst" % "VMVC" % "2023.9.26-BREAK"
+libraryDependencies += "com.github.Valkryst" % "VMVC" % "2023.9.26-BREAK-2"
 ```
 
 ## Example
