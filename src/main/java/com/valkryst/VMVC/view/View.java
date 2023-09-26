@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 public abstract class View<C extends Controller<?>> extends JPanel {
     /** The {@link Controller} associated with this {@code View}. */
-    final C controller;
+    protected final C controller;
 
     /**
      * Constructs a new {@code View}.
