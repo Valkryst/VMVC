@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 public abstract class Controller<M extends Model<?, ?>> {
     /** The {@link Model} associated with this {@code Controller}. */
-    final M model;
+    protected final M model;
 
     /**
      * Constructs a new {@code Controller}.
