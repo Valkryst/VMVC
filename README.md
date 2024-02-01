@@ -24,6 +24,7 @@ The classes can be described as follows:
 ## Links
 
 * Projects Using this Pattern
+  * [Schillsaver](https://github.com/Valkryst/Schillsaver)
   * [Valerie](https://github.com/Valkryst/Valerie) 
 * [Installation](https://github.com/Valkryst/VMVC#installation)
     * [Gradle](https://github.com/Valkryst/VMVC#-gradle)
