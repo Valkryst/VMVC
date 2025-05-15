@@ -1,5 +1,4 @@
 [![Java CI with Maven](https://github.com/Valkryst/VMVC/actions/workflows/maven.yml/badge.svg)](https://github.com/Valkryst/VMVC/actions/workflows/maven.yml)
-[![CodeQL](https://github.com/Valkryst/VMVC/actions/workflows/codeql.yml/badge.svg)](https://github.com/Valkryst/VMVC/actions/workflows/codeql.yml)
 
 This project is a Java implementation of the MVC design pattern. It is designed to be used with Swing UIs and for my
 personal use. It is not intended to be a general purpose MVC framework, but you are free to use it as such if you wish.
