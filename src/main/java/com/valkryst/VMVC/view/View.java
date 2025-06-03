@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @param <C> The type of {@link Controller} associated with this {@code View}.
  */
-public abstract class View<C extends Controller<?>> extends JPanel {
+public abstract class View<C extends Controller<?>> extends JPanel implements ViewInterface{
     /** The {@link Controller} associated with this {@code View}. */
     protected final C controller;
 

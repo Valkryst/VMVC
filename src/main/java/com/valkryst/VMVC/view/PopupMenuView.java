@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @param <C> The type of {@link Controller} associated with this {@code View}.
  */
-public abstract class PopupMenuView<C extends Controller<?>> extends JPopupMenu {
+public abstract class PopupMenuView<C extends Controller<?>> extends JPopupMenu implements ViewInterface {
     /** The {@link Controller} associated with this {@code View}. */
     protected final C controller;
 
