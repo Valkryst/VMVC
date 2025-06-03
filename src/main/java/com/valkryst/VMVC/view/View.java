@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.util.Objects;
 
 /**
- * A visual representation of a {@link Model}.
+ * A visual representation of a {@link Model}, displayed by a {@link JPanel}.
  *
  * @param <C> The type of {@link Controller} associated with this {@code View}.
  */
